@@ -1,12 +1,20 @@
 require_relative 'entry'
 
-   class AddressBook
-     attr_reader :entries
+class AddressBook
+  attr_reader :entries
 
-     def initialize
+  def initialize
        @entries = []
-     end
- end
+  end
+
+  def remove_entry(name, phone, email)
+    delete = nil
+    @entries.each do |entry|
+      if name ==  entry.name && phone_number == entry.phone_number && entry.email == email
+        delete = entry
+      end
+  end
+
 
    def add_entry(name, phone_number, email)
      # #9
@@ -21,5 +29,4 @@ require_relative 'entry'
      # #11
      entries.insert(index, Entry.new(name, phone_number, email))
    end
- 
- end
+end
