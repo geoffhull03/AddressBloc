@@ -51,4 +51,3 @@ require_relative '../models/address_book'
        expect(book.entries.first.name).to eq("Geoff Hull")
    end
  end
- end
