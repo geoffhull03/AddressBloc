@@ -66,7 +66,7 @@ require_relative '../models/address_book'
     email = gets.chomp
 
     # #13
-    address_book.add_entry(name, phone, email)
+    @address_book.add_entry(name, phone, email)
 
     system "clear"
     puts "New entry created"
