@@ -43,7 +43,8 @@ require_relative '../models/address_book'
 
        name = "Ada Lovelace"
        phone_number = "010.012.1815"
-       email = 'augusta.king@lovelace.com'
+       email_address = 'augusta.king@lovelace.com'
+       book.add_entry(name, phone_number, email_address)
 
        expect(book.entries.size).to eq 2
        book.remove_entry(name, phone_number, email_address)
