@@ -234,4 +234,14 @@ require_relative '../models/address_book'
      end
    end
 
+   describe "#{go_nuclear}" do
+     it "should delete all entries" do
+       book.add_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
+       book.add_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
+       book.add_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
+
+       book.go_nuclear
+       expect(book.entries.size).to eq 0
+     end
+    end
 end

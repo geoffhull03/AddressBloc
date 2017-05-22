@@ -77,5 +77,8 @@ class AddressBook
     end
     return nil
   end
-  
+
+  def go_nuclear
+    @entries = []
+  end
 end
